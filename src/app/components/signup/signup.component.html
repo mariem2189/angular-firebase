@@ -1,0 +1,46 @@
+<div class="container-fluid">
+  <div class="color"></div>
+  <div id="connexion" style="margin-top: 10%;">
+    <h1>Create your account</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit suscipit praesentium vitae blanditiis ex neque
+      sequi aperiam alias, aut provident eius sint laboriosam, laudantium, autem dignissimos aliquam in accusamus
+      quisquam?</p>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="row">
+          <div class="col-lg-6 form-group">
+            <label for="firstName">Name:</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="col-lg-6 form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" class="form-control">
+          </div>
+        </div>
+        <h1 *ngIf="authenticationService && authenticationService.userData | async">Hello {{
+          (authenticationService.userData | async)?.email }}</h1>
+        <div *ngIf="!(authenticationService.userData | async)">
+          <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="text" class="form-control" [(ngModel)]="email" placeholder="email">
+          </div>
+          <div class="row">
+            <div class="col-lg-6 form-group">
+              <label for="pwd">Password:</label>
+              <input type="password" class="form-control" [(ngModel)]="password" [ngModelOptions]="{standalone: true}"  id="pwd">
+            </div>
+            <div class="col-lg-6 form-group">
+              <label for="pwd">Confirm Password:</label>
+              <input type="password" class="form-control" [(ngModel)]="confirmPassword" id="confirmPwd">
+            </div>
+          </div>
+          <button (click)="signUp()" class="btn btn-default">Sign Up</button>
+          
+          <a routerLink='/videos' style="margin-left:5px;" class="btn btn-info">Next</a>
+
+        </div>
+        <button (click)="signOut()" class="btn btn-primary"
+          *ngIf="authenticationService.userData | async">Logout</button>
+      </div>
+    </div>
+  </div>

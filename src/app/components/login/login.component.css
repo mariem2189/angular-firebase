@@ -1,0 +1,86 @@
+#login{
+    background-color: #F0F2F7;
+    padding: 100px;
+}
+#login a{
+    text-decoration: none;
+}
+h1{
+    color: #233B58;
+    font-size: 50px;
+    width: 70%;
+    margin-bottom: 30px;
+}
+#image{
+    width: 50%;
+    margin: auto;
+    
+}
+#image img:first-child{
+    padding: 0 10px;
+}
+#login .col-lg-4{
+    background-color: #F9FAFC;
+    border: 1px solid #C7C7C9; 
+    padding: 40px;
+    border-radius: 30px;
+}
+#login section{
+    width: 90%;
+    margin: auto;
+}
+#login .col-lg-8{
+    padding: 30px;
+  
+    text-align: center;
+}
+.col-lg-8 p{
+    font-size: 18px;
+    margin: 0 160px;
+    line-height: 2;
+    padding: 20px 0;
+    
+}
+label{
+    color: #BFBFC0;
+    font-weight: 400;
+    font-size: 20px;
+}
+input{
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+article{
+    width: 80%;
+    margin:100px auto 0;
+    
+}
+article button{
+    width: 100%;
+    border-radius: 5px;
+    color: white;
+    padding: 20px 0;
+    font-size: 20px;
+}
+#or{
+    text-align: center;
+    padding: 30px 0;
+    font-weight: 500;
+}
+#or::after{
+    content: "";
+    border: 1px solid #F3F4F6;
+    display: block;
+   margin-top: -10px;
+
+}
+#or span{
+    background-color: #F9FAFC;
+    padding: 10px;
+}
+#account{
+    font-size: 14px;
+    text-align: center;
+    padding: 10px 0;
+}

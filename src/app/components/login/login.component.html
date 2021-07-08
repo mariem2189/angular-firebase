@@ -1,0 +1,42 @@
+<div class="container-fluid" id="login">
+  <section>
+    <div class="row">
+      <div class="col-lg-4">
+        <h1>Login in to your account</h1>
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email Address</label>
+            <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" class="form-control">
+          </div>
+          <article>
+            <div>
+              <button type="submit" (click)="signIn()" class="btn" style="background-color: #17AEBE">Login</button>
+            </div>
+            <p id="or"><span>OR</span></p>
+            <div>
+              <button  class="btn btn-danger" (click)="connectWithGoogle()"><img
+                  src="assets/images//gmail.png" alt="gmail"> Connect with google</button>
+            </div>
+          </article>
+        </form>
+        <p id="account">Don't have an account? <a routerLink='/signup'>signup here</a> </p>
+      </div>
+      <div class="col-lg-8">
+        <div>
+          <img src="assets/images/Group 1741.png" alt="iphone">
+        </div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium corrupti inventore tempore? Porro,
+          expedita dolores fugit nihil officia ratione eligendi </p>
+        <div id="image">
+          <img src="assets/images/app store.png" alt="app store">
+          <img src="assets/images/google play.png" alt="google play">
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,23 @@
+<div class="card">
+    <div class="card-header">List of Files
+        <div class="col-lg-4 form-group">
+            <input class="form-control me-2" type="text" placeholder="Search" [(ngModel)]='term'
+                [ngModelOptions]="{standalone: true}">
+        </div>
+    </div>
+    <div *ngIf="fileUploads">
+        <ul class="list-group list-group-flush" *ngFor="let file of fileUploads | customFilter:term">
+
+
+            <div class="row">
+                <div class="video col-lg-4">
+                    <video controls (click)="toggleVideo()" #videoPlayer style="width: 200px; height: 200px;">
+                        <source src="{{file.url}}" type="video/mp4" />
+
+                    </video>
+                    <p>{{file.name}}</p>
+                </div>
+            </div>
+        </ul>
+    </div>
+</div>
